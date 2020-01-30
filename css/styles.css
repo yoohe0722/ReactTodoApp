@@ -3,6 +3,11 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
 .container {
   width: 300px;
   margin: auto;
@@ -27,8 +32,9 @@ body {
   margin-right: 5px;
 }
 
-.done {
-  text-decoration: line-through;
-  color: #ccc;
+.cmd {
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+  margin-left: 5px;
 }
-
