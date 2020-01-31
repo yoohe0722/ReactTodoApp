@@ -1,6 +1,13 @@
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif;
+  letter-spacing: 2px;
+  background-image: url("https://source.unsplash.com/random/?travel");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .done {
@@ -9,14 +16,23 @@ body {
 }
 
 .container {
-  width: 300px;
+  width: 500px;
   margin: auto;
+  border: 1px solid #ccc;
+  padding: 5px 30px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #cccc;
+  background-color: white;
+  opacity: 0.9
 }
 
 .container h1 {
-  font-size: 16px;
+  font-size:35px;
   border-bottom: 1px solid #ddd;
   padding: 16px 0;
+  letter-spacing:3px;
+  font-family: 'Economica', sans-serif;
+  color: #333333;
 }
 
 .container ul {
@@ -25,7 +41,9 @@ body {
 }
 
 .container li {
-  line-height: 1.5;
+  line-height: 2;
+  font-size: 18px;
+  color: #333333;
 }
 
 .container input[type="checkbox"] {
@@ -41,7 +59,7 @@ body {
 
 h1 > span {
   color: #ccc;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: normal;
   margin-left: 5px;
 }
@@ -49,7 +67,14 @@ h1 > span {
 .container input[type="text"] {
   padding: 2px;
   margin-right: 5px;
+  width:90%;
 }
+
 h1 > button {
   float: right;
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 5px;
 }
