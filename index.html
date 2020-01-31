@@ -35,10 +35,10 @@
         );
       }
 
-      function TodoForm() {
+      function TodoForm(props) {
         return (
           <form>
-            <input type="text" />
+            <input type="text" value={props.item} onChange={props.updateItem}/>
             <input type="submit" value="Add"/>
           </form>
         )
@@ -65,10 +65,12 @@
         constructor() {
           super();
           this.state = {
-            todos: todos
+            todos: todos,
+            item: ''
           };
           this.checkTodo = this.checkTodo.bind(this);
           this.deleteTodo = this.deleteTodo.bind(this);
+          this.updateItem = this.updateItem.bind(this);
         }
 
         deleteTodo(todo) {
@@ -100,6 +102,12 @@
           });
         }
 
+        updateItem(e) {
+          this.setState({
+            item: e.target.value
+          });
+        }
+
         render() {
           return (
             <div className="container">
@@ -109,7 +117,10 @@
                 checkTodo={this.checkTodo}
                 deleteTodo={this.deleteTodo}
               />
-              <TodoForm/>
+              <TodoForm
+                item={this.state.item}
+                updateItem={this.updateItem}
+              />
             </div>
           );
         }
