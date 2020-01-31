@@ -35,6 +35,15 @@
         );
       }
 
+      function TodoForm() {
+        return (
+          <form>
+            <input type="text" />
+            <input type="submit" value="Add"/>
+          </form>
+        )
+      }
+
       function TodoList(props) {
         const todos = props.todos.map(todo => {
           return (
@@ -100,6 +109,7 @@
                 checkTodo={this.checkTodo}
                 deleteTodo={this.deleteTodo}
               />
+              <TodoForm/>
             </div>
           );
         }
